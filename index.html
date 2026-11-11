@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Modern Dark Calculator</title>
+  <!-- Link to the external CSS file that handles our styling -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Main Calculator Container -->
+  <main class="calculator">
+    
+    <!-- Display Section: Shows the calculation history and current input -->
+    <div class="display">
+      <!-- Previous operand: shows earlier number and chosen operator (e.g., "12 +") -->
+      <div id="previous-operand" class="previous-operand"></div>
+      <!-- Current operand: shows the current number being typed or the final result -->
+      <div id="current-operand" class="current-operand">0</div>
+    </div>
+
+    <!-- Buttons Section: Arranged neatly using CSS Grid -->
+    <div class="button-grid">
+      <!-- Row 1: Function keys & Division -->
+      <button type="button" class="btn btn-action" data-action="all-clear">AC</button>
+      <button type="button" class="btn btn-action" data-action="delete">DEL</button>
+      <button type="button" class="btn btn-action" data-action="percent">%</button>
+      <button type="button" class="btn btn-operator" data-operation="÷">÷</button>
+
+      <!-- Row 2: 7, 8, 9 & Multiplication -->
+      <button type="button" class="btn btn-number" data-number="7">7</button>
+      <button type="button" class="btn btn-number" data-number="8">8</button>
+      <button type="button" class="btn btn-number" data-number="9">9</button>
+      <button type="button" class="btn btn-operator" data-operation="×">×</button>
+
+      <!-- Row 3: 4, 5, 6 & Subtraction -->
+      <button type="button" class="btn btn-number" data-number="4">4</button>
+      <button type="button" class="btn btn-number" data-number="5">5</button>
+      <button type="button" class="btn btn-number" data-number="6">6</button>
+      <button type="button" class="btn btn-operator" data-operation="-">−</button>
+
+      <!-- Row 4: 1, 2, 3 & Addition -->
+      <button type="button" class="btn btn-number" data-number="1">1</button>
+      <button type="button" class="btn btn-number" data-number="2">2</button>
+      <button type="button" class="btn btn-number" data-number="3">3</button>
+      <button type="button" class="btn btn-operator" data-operation="+">+</button>
+
+      <!-- Row 5: 0 (wider button), Decimal point, and Equals -->
+      <button type="button" class="btn btn-number btn-zero" data-number="0">0</button>
+      <button type="button" class="btn btn-number" data-number=".">.</button>
+      <button type="button" class="btn btn-operator btn-equals" data-action="calculate">=</button>
+    </div>
+
+  </main>
+
+  <!-- Link to the JavaScript file at the bottom so HTML loads first -->
+  <script src="script.js"></script>
+</body>
+</html>
+
